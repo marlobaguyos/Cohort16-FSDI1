@@ -31,13 +31,6 @@ nav{
     justify-content: space-between;
 }
 
-nav a{
-    color:rgb(32,32,32);
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: 700;
-}
-
 header{
     height: 400px;
     background-image:url(../img/hero.jpg);
@@ -45,17 +38,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.btn{
-    background-color: #027683;
-    color: white;
-    padding: 8px;
-    margin-top: 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius:5px;
-    font-size: 16px;
+    font-size: larger;;
 }
 
 /*services section */
@@ -77,11 +60,11 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    border-radius: 10px;
 }
 
 .icon-container i{
-    font-size: 24px;
+    font-size: 40px;
 }
 
 .flex-container{
@@ -95,29 +78,4 @@ header{
     justify-content: center;
     align-items: center;
     padding: 40px;
-}
-
-form{
-    background-color: gray;
-    color: white;
-    max-width: 800px;
-    margin:0 auto; /*top-bottom left-right*/
-    padding: 20px;
-    border-radius: 10px;
-}
-
-form h3{
-    color:#e4d50b;
-}
-
-input{
-    width: 80%;
-    height: 25px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    border:none;
-}
-
-label{
-    font-size: 18px;
 }
