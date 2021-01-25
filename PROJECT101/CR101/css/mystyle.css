@@ -96,3 +96,8 @@ header{
     align-items: center;
     padding: 40px;
 }
+
+form{
+    background-color: gray;
+    color: white;
+}
