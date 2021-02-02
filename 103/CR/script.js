@@ -35,18 +35,11 @@ console.log(plus);
 
 
 document.write(`<div>
-<h1>Do Math Calculator</h1>
-<h2>How to use this Calculator</h2>
-<p>
-1. Enter your first number when prompted.</br>
-2. Press Enter</br>
-3. Enter your Second number.</br>
-4. Press Enter</br>
-</p>
-<h2>Result</h2>
-<p>Addition: ${x} + ${y} = ${plus} </br>
-Subtraction: ${x} - ${y} = ${minus} </br>
-Multiplication: ${x} * ${y} = ${times} </br>
-Division: ${x} / ${y} = ${divide} </br>
-</p>
+<h2>Your Answers Dummy!</h2>
+    <ul>
+        <li>Addition: ${x} + ${y} = ${plus}</li>
+        <li>Subtraction: ${x} - ${y} = ${minus} </li>
+        <li>Multiplication: ${x} * ${y} = ${times}</li>
+        <li>Division: ${x} / ${y} = ${divide}</li>
+    </ul>
 </div>`);
