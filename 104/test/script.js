@@ -2,7 +2,10 @@
 
 const person = {
     name:"Trae Davis",
-    age:80
+    age:80,
+    birthYear:function(){
+        return
+    }
 }
 
 console.log(person.name);
