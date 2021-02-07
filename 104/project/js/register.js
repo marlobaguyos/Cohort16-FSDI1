@@ -8,13 +8,6 @@ const salon={
         open:"8:00 am",
         close:"5:00 pm"
     },
-//     pets:[
-//         {name:"Scooby", age:50, breed:"Dane",gender:"Male",owner:"Shaggy",phone:"555-555-5555"},
-//         {name:"Scrapy", age:40, breed:"Dane",gender:"Male",owner:"Shaggy",phone:"555-555-5555"},
-//         {name:"Speedy", age:60, breed:"Mixed",gender:"Male",owner:"Bugs",phone:"444-444-4444"},
-//         {name:"Pugpug", age:60, breed:"pug",gender:"Female",owner:"Marlo",phone:"111-111-1111"},
-//         {name:"Bababo", age:60, breed:"cat",gender:"Male",owner:"Phuong",phone:"222-222-2222"},
-//     ]
 }
 
 document.getElementById("footer-text").innerHTML=`
@@ -46,3 +39,31 @@ var scooby=new Pet("Scooby",50,"Dane","Male","Full Service", "Shaggy","555-555-5
 var scrapy=new Pet("Scrapy",40,"Dane","Male","Shower","Shaggy","555-555-5555");
 var speedy=new Pet("Speedy",40,"Mixed","Male","Nail cut","Bunny","333-333-3333");
 console.log(scooby,scrapy,speedy);
+
+//push the pets into the array
+//salon.pets=[scooby,scrapy,speedy];
+salon.pets.push(scooby);
+salon.pets.push(scrapy);
+salon.pets.push(speedy);
+console.log(salon.pets)
+
+//create the function register
+function register(){
+    //get the info from the inputs
+    var txtName=document.getElementById("petAgeTxt");
+    var txtAge=document.getElementById("petAgeTxt");
+    var txtBreed=document.getElementById("petBreedTxt");
+    var txtGender=document.getElementById("petGenderTxt");
+    var txtService=document.getElementById("petServiceTxt");
+    var txtOwner=document.getElementById("OwnerNameTxt");
+    var txtPhone=document.getElementById("OwnerPhoneTxt");
+
+
+    console.log(txtName.value);
+    console.log(txtBreed.value);
+    console.log(txtGender.value);
+    console.log(txtService.value);
+    console.log(txtOwner.value);
+    console.log(txtPhone.value);
+    console.log(txtAge.value);
+}
