@@ -79,7 +79,7 @@ header{
 }
 
 nav{
-    text-align: center;4252147288877
+    text-align: center;
     padding:3rem;
 }
 
@@ -164,8 +164,6 @@ nav a{
     background-color: #000000;
     padding:3rem;
     margin-top:4rem;
-    display:flex;
-    justify-content: space-between;
 }
 
 .footer-container p{
@@ -175,12 +173,12 @@ nav a{
 }
 
 .footer-container p strong{
-    font-weight: 700;
+    font-size: 700;
 }
 
-@media(min-width:768){
-    .site-footer{
-        display:flex;
+@media(min-width:768px){
+    .footer-container{
+        display: flex;
         justify-content: space-between;
     }
 }
