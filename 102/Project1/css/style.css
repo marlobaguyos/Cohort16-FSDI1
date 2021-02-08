@@ -164,6 +164,8 @@ nav a{
     background-color: #000000;
     padding:3rem;
     margin-top:4rem;
+    display:flex;
+    justify-content: space-between;
 }
 
 .footer-container p{
@@ -177,7 +179,7 @@ nav a{
 }
 
 @media(min-width:768){
-    .footer-container{
+    .site-footer{
         display:flex;
         justify-content: space-between;
     }
