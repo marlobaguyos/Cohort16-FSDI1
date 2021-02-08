@@ -10,6 +10,7 @@ html{
 
 body {
     font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
 }
 
 h1{
@@ -189,9 +190,32 @@ nav a{
 }
 
 /* contact */
+@media(min-width:768px){
+    .flex{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .center-element{
+        justify-content: center;
+    }
+    .complete{
+        flex:0 0 100%
+    }
+    .portion-6{
+        flex:0 0 calc(66.6% - 1rem);
+    }
+}
+
 .contact-form{
     background-color: white;
     padding: 5rem;
+}
+
+@media(min-width:768px){
+    .contact-form{
+        margin-top:-10rem;
+    }
 }
 
 .contact-form .field{
@@ -224,3 +248,23 @@ nav a{
     justify-content: flex-end;
 }
 
+/*about */
+@media(min-width:768px){
+    .grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 2rem;
+    }
+}
+
+.grid .grid-img{
+    margin: 3rem 0;
+}
+
+.grid-text p{
+    text-align: justify;
+}
+
+.grid-text{
+    margin:3rem 0;
+}
