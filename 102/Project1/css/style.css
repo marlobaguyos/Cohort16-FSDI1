@@ -12,19 +12,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-header{
-    background-image: url(/102/Project/img/banner.jpg);
-    height:60vh;
-    background-size: cover;
-    background-position: center center;
-    color: white;
-}
-
 h1{
     font-size: 4.8rem;
     text-align: center;
     font-weight: 400;
-    /* margin:50px 0; */
     padding: 3rem 0;
 }
 
@@ -34,6 +25,15 @@ h2{
 
 h3{
     font-size:3.2rem;
+}
+
+h4{
+    font-size: 2.8rem;
+}
+
+p{
+    font-size: 1.6ream;
+    line-height: 2;
 }
 
 img{
@@ -55,6 +55,13 @@ img{
     flex:0 0 100%;
 }
 
+@media(min-width:768px){
+    .btn{
+        display: inline-block;
+        flex-basis: auto;
+    }
+}
+
 .container{
     width: 80%;
     margin: 0 auto;
@@ -63,8 +70,17 @@ img{
 
 
 /*header*/
+header{
+    background-image: url(/102/Project/img/banner.jpg);
+    height:60vh;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+}
+
 nav{
-    text-align: center;
+    text-align: center;4252147288877
+    padding:3rem;
 }
 
 @media(min-width:768px){
@@ -74,7 +90,7 @@ nav{
     }
 
     nav a{
-        margin: right 2rem;
+        margin-right: 2rem;
     }
 }
 
@@ -102,7 +118,68 @@ nav a{
 }
 
 /*blog section */
+.main-container{
+    display: flex;
+    flex-wrap:wrap;
+}
+
 .blog-entry{
+    padding: 1rem;
     margin-bottom:2rem;
     border-bottom: 1px solid #e1e1e1;
 }
+
+/* .blog-text {
+    font-size: 1.6rem;
+} */
+
+.blog-entry:last-of-type{
+    border: none;
+}
+
+.blog, courses{
+    flex:0 0 100%;
+}
+
+.courses{
+    order:-1;
+}
+
+@media(min-width:768px){
+    .main-conatainer{
+        justify-content: space-between;
+    }
+    .blog{
+        flex-basis: 66.6%;
+    }
+
+    .courses{
+        flex-basis:calc(33.3% - 4rem);
+        order: 2;
+    }
+}
+
+/* footer*/
+.site-footer{
+    background-color: #000000;
+    padding:3rem;
+    margin-top:4rem;
+}
+
+.footer-container p{
+    font-size: 4rem;
+    color:#ffffff;
+    text-align: center;
+}
+
+.footer-container p strong{
+    font-weight: 700;
+}
+
+@media(min-width:768){
+    .footer-container{
+        display:flex;
+        justify-content: space-between;
+    }
+}
+
