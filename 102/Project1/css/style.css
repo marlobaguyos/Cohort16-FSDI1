@@ -1,3 +1,4 @@
+/* global */
 html{
     font-size: 62.5%;
 }
@@ -20,7 +21,7 @@ header{
 }
 
 h1{
-    font-size: 4.2rem;
+    font-size: 4.8rem;
     text-align: center;
     font-weight: 400;
     /* margin:50px 0; */
@@ -28,7 +29,7 @@ h1{
 }
 
 h2{
-    font-size: 3.2rem;
+    font-size: 4rem;
 }
 
 h3{
@@ -38,6 +39,30 @@ h3{
 img{
     max-width: 100%;
 }
+
+/*utility */
+.btn{
+    display: block;
+    text-align: center;
+    padding:1rem;
+    margin:2rem 0;
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size:2rem;
+    background-color: #000000;
+    flex:0 0 100%;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+
+/*header*/
 nav{
     text-align: center;
 }
@@ -74,12 +99,6 @@ nav a{
 
 .header-text p{
     font-size: 2.8rem;
-}
-
-.container{
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 5rem;
 }
 
 /*blog section */
