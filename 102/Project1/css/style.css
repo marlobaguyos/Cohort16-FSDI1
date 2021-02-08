@@ -22,6 +22,9 @@ h1{
     padding: 30px 0;
 }
 
+h2{
+    font-size: 32px;
+}
 nav{
     text-align: center;
 }
@@ -38,6 +41,7 @@ nav{
 }
 
 nav a{
+    display: block;
     font-size: 18px;
     color: white;
     text-decoration: none;
@@ -48,8 +52,20 @@ nav a{
     .site-header{
         display:flex;
         justify-content: space-between;
-        flex-direction: row;
     }
 }
 
+.header-text{
+    text-align: center;
+}
+
+.header-text p{
+    font-size: 28px;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
 
