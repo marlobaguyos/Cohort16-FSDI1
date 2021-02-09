@@ -14,4 +14,9 @@ let product={
     price:256.50
 }
 
-document.write(`<p>${product.description}</p>`)
+document.write(`<p>Product: ${product.description}</p>
+                <p><b>Code: ${product.code}</b></p>
+                <p>Price: ${product.price}</p>
+                <p>Taxes: ${product.price * 0.16}</p>
+                <p>Total: ${product.price * 1.16}</p>
+                    `)
