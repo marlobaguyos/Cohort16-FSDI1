@@ -2,11 +2,14 @@
 
 const person = {
     name:"Trae Davis",
-    age:80
+    age:80,
+    birthYear:function(){
+        return new Date().getFullYear() - this.age;
+    }
 }
 
 console.log(person.name);
-console.log(person.age);
+console.log(person.birthYear());
 
 let product={
     code:"12345",
