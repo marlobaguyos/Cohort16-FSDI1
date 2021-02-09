@@ -8,6 +8,7 @@ const salon={
         open:"8:00 am",
         close:"5:00 pm"
     },
+    pets:[]
 }
 
 document.getElementById("footer-text").innerHTML=`
@@ -16,11 +17,9 @@ document.getElementById("footer-text").innerHTML=`
         <p> It opens from ${salon.hours.open} to ${salon.hours.close}</p>
 `;
 
-// for(var i=0;i<5;i++){
-//     console.log(salon.pets[i])
+// for(var i=0;i<3;i++){
+//     console.log(salon.pets[i]);
 // }
-
-//create the pet class
 
 class Pet{
     constructor(name,age,breed,gender,service,owner,phone){
@@ -47,23 +46,41 @@ salon.pets.push(scrapy);
 salon.pets.push(speedy);
 console.log(salon.pets)
 
+var txtName=document.getElementById("petNameTxt");
+var txtAge=document.getElementById("petAgeTxt");
+var txtBreed=document.getElementById("petBreedTxt");
+var txtGender=document.getElementById("petGenderTxt");
+var txtService=document.getElementById("petServiceTxt");
+var txtOwner=document.getElementById("OwnerNameTxt");
+var txtPhone=document.getElementById("OwnerPhoneTxt");
+
+function clear(){
+    txtName.value="";
+    txtAge.value="";
+    txtBreed.value="";
+    txtGender.value="";
+    txtService.value="";
+    txtOwner.value="";
+    txtPhone.value="";
+}
+
 //create the function register
 function register(){
     //get the info from the inputs
-    var txtName=document.getElementById("petAgeTxt");
-    var txtAge=document.getElementById("petAgeTxt");
-    var txtBreed=document.getElementById("petBreedTxt");
-    var txtGender=document.getElementById("petGenderTxt");
-    var txtService=document.getElementById("petServiceTxt");
-    var txtOwner=document.getElementById("OwnerNameTxt");
-    var txtPhone=document.getElementById("OwnerPhoneTxt");
-
-
-    console.log(txtName.value);
-    console.log(txtBreed.value);
-    console.log(txtGender.value);
-    console.log(txtService.value);
-    console.log(txtOwner.value);
-    console.log(txtPhone.value);
-    console.log(txtAge.value);
+            // console.log(txtName.value);
+            // console.log(txtAge.value);
+            // console.log(txtBreed.value);
+            // console.log(txtGender.value);
+            // console.log(txtService.value);
+            // console.log(txtOwner.value);
+            // console.log(txtPhone.value);
+    //create a generic object
+    var thePet=new Pet(txtName.value,txtAge.value,txtBreed.value,txtGender.value,txtService.value,txtOwner.value,txtPhone.value);
+    console.log(thePet);
+    //push the pet into the array
+    salon.pets.push(thePet);
+    //display function
+    display();
+    clear();
 }
+
