@@ -22,9 +22,6 @@ var item5={
 }
 var items=[item1,item2,item3,item4,item5]
 
-
-
-
 //travel the array
 for (var i=0;i<products.length;i++){
     console.log(`${products[i]} ---- ${prices[i]}`);
