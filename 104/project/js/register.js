@@ -59,7 +59,7 @@ var txtAge=document.getElementById("petAgeTxt");
 var txtBreed=document.getElementById("petBreedTxt");
 var txtGender=document.getElementById("petGenderTxt")
 var txtService=document.getElementById("petServiceTxt");
-var txtOwner=document.getElementById("OwnerNameTxt");
+var txtOwner=document.getElementById("ownerNameTxt");
 var txtPhone=document.getElementById("ownerPhoneTxt");
     
 function clear(){
@@ -81,4 +81,15 @@ function register(){
     // display function
     display(thePet);
     clear();
+}
+
+function profitCalculation(){
+    //create a variable sum and initializate the variable
+    var sum=0;
+    //travel the salon.pets[] (for)
+    for(var i=0;i<salon.pets.length;i++){
+        //sum all the prices
+        sum=sum+salon.pets[i].price;
+    }
+    //display the result on the html
 }

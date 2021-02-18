@@ -1,6 +1,7 @@
 function display(){
     //display the number of pets
     document.getElementById("numberPets").innerHTML=`Registered pets: ${salon.pets.length}`;
+
     //clear the field
     document.getElementById("pets").innerHTML="";
     //travel the pet's array
@@ -9,6 +10,12 @@ function display(){
         //nails -> , shower -> 20, hair -> 15, full ->25
         if(salon.pets[i].service==="nails"){
             salon.pets[i].price=15;
+        }else if(salon.pets[i].service==="shower"){
+            salon.pets[i].price=20;
+        }else if(salon.pets[i].service==="hair"){
+            salon.pets[i].price=15;
+        }else if(salon.pets[i].service==="full"){
+            salon.pets[i].price=25;
         }
         //create a tmp
             var tmp=`<div class="pet"> 
@@ -19,7 +26,7 @@ function display(){
             <p>${salon.pets[i].service}</p>
             <p>${salon.pets[i].owner}</p>
             <p>${salon.pets[i].phone}</p>
-            <p>${salon.pets[i].price}</p>
+            <p>$${salon.pets[i].price}</p>
             </div>`
         //concatenate all the info
     document.getElementById("pets").innerHTML+=tmp;
