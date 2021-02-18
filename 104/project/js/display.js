@@ -1,10 +1,10 @@
 function display(){
     //clear the field
-
+    document.getElementById("pets").innerHTML="";
     //travel the pet's array
     for(var i=0;i<salon.pets.length;i++){
         //create a tmp
-            var tmp=`<div> 
+            var tmp=`<div class="pet"> 
             <h3>${salon.pets[i].name}</h3>
             <p>${salon.pets[i].age}</p>
             <p>${salon.pets[i].breed}</p>
@@ -14,7 +14,7 @@ function display(){
             <p>${salon.pets[i].phone}</p>
             </div>`
         //concatenate all the info
-    document.getElementById("pets").innerHTML=tmp;
+    document.getElementById("pets").innerHTML+=tmp;
     }
     
 }

@@ -52,20 +52,32 @@ salon.pets.push(scooby);
 salon.pets.push(scrapy);
 salon.pets.push(speedy);
 console.log(salon.pets);
-    //create the function register
-    function register(){
-        var txtName=document.getElementById("petNameTxt");
-        var txtAge=document.getElementById("petAgeTxt");
-        var txtBreed=document.getElementById("petBreedTxt");
-        var txtGender=document.getElementById("petGenderTxt")
-        var txtService=document.getElementById("petServiceTxt");
-        var txtOwner=document.getElementById("OwnerNameTxt");
-        var txtPhone=document.getElementById("ownerPhoneTxt");
 
-        //create a generic constructor
-        var thePet=new Pet(txtName.value,txtAge.value,txtBreed.value,txtGender.value,txtService.value,txtOwner.value,txtPhone.value);
-        console.log(thePet);
+var txtName=document.getElementById("petNameTxt");
+var txtAge=document.getElementById("petAgeTxt");
+var txtBreed=document.getElementById("petBreedTxt");
+var txtGender=document.getElementById("petGenderTxt")
+var txtService=document.getElementById("petServiceTxt");
+var txtOwner=document.getElementById("OwnerNameTxt");
+var txtPhone=document.getElementById("ownerPhoneTxt");
     
-        //push the pet into the array
-        salon.pets.push(thePet);
-    }
+function clear(){
+    txtName.value="";
+    txtAge.value="";
+    txtBreed.value="";
+    txtGender.value="";
+    txtService.value="";
+    txtOwner.value="";
+    txtPhone.value="";
+}
+// create the function register
+function register(){
+    //create a generic object
+    var thePet=new Pet(txtName.value,txtAge.value,txtBreed.value,txtGender.value,txtService.value,txtOwner.value,txtPhone.value);
+    console.log(thePet);
+    // push the pet into the array
+    salon.pets.push(thePet);
+    // display function
+    display(thePet);
+    clear();
+}
