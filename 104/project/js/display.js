@@ -31,7 +31,7 @@ function display(){
         //concatenate all the info
     document.getElementById("pets").innerHTML+=tmp;
     }
-    
+    profitCalculation();
 }
 //use the function
 display();

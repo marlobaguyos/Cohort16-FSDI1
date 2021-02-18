@@ -92,4 +92,6 @@ function profitCalculation(){
         sum=sum+salon.pets[i].price;
     }
     //display the result on the html
+    document.getElementById("profits").innerHTML=`${sum}`;
 }
+
