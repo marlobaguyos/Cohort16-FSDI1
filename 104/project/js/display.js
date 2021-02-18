@@ -12,6 +12,7 @@ function display(){
             <p>${salon.pets[i].service}</p>
             <p>${salon.pets[i].owner}</p>
             <p>${salon.pets[i].phone}</p>
+            <p>${salon.pets[i].price}</p>
             </div>`
         //concatenate all the info
     document.getElementById("pets").innerHTML+=tmp;

@@ -42,10 +42,21 @@
                 <input type="text" id="petBreedTxt" class="form-control" placeholder="Enter pet's breed"><br>
                 <input type="text" id="petGenderTxt" class="form-control" placeholder="Enter pet's gender"><br>
                 <!-- <input type="text" id="petServiceTxt" class="form-control" placeholder="Enter pet's service"><br> -->
+                <select name="service" id="petServiceTxt" class="form-control">
+                    <option disabled>--- Select an option ---</option>
+                    <option value="nails">Nails cut</option>
+                    <option value="hair">Hair cut</option>
+                    <option value="shower">Shower</option>
+                    <option value="full">Full Service</option>
+                </select><br>
                 <input type="text" id="ownerNameTxt" class="form-control" placeholder="Enter owner's name"><br>
                 <input type="text" id="ownerPhoneTxt" class="form-control" placeholder="Enter contact phone"><br>
             </form>
             <button class="btn btn-dark" onclick="register()">Register</button>
+        </div>
+        <div class="info">
+            <p id="numberPets"></p>
+            <p id="profits">$</p>
         </div>
         <div id="pets" class="container">
 

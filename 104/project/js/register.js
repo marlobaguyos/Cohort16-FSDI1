@@ -37,6 +37,7 @@ document.getElementById("footer-text").innerHTML=`
             this.service=service;
             this.owner=owner;
             this.phone=phone;
+            this.price=0;
         }
     }
 
