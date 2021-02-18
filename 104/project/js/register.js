@@ -63,7 +63,7 @@ console.log(salon.pets);
         var txtPhone=document.getElementById("ownerPhoneTxt");
 
         //create a generic constructor
-        var thePet=new Pet(txtName.nodeValue,txtAge.value,txtBreed.value,txtGender.value,txtService.value,txtOwner.value,txtPhone.value);
+        var thePet=new Pet(txtName.value,txtAge.value,txtBreed.value,txtGender.value,txtService.value,txtOwner.value,txtPhone.value);
         console.log(thePet);
     
         //push the pet into the array
