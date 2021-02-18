@@ -20,13 +20,13 @@ function display(){
         //create a tmp
             var tmp=`<div class="pet"> 
             <h3>${salon.pets[i].name}</h3>
-            <p>${salon.pets[i].age}</p>
-            <p>${salon.pets[i].breed}</p>
-            <p>${salon.pets[i].gender}</p>
-            <p>${salon.pets[i].service}</p>
-            <p>${salon.pets[i].owner}</p>
-            <p>${salon.pets[i].phone}</p>
-            <p>$${salon.pets[i].price}</p>
+            <p><strong>Age: </strong>${salon.pets[i].age}</p>
+            <p><strong>Breed: </strong>${salon.pets[i].breed}</p>
+            <p><strong>Gender: </strong>${salon.pets[i].gender}</p>
+            <p><strong>Service: </strong>${salon.pets[i].service}</p>
+            <p><strong>Owner: </strong>${salon.pets[i].owner}</p>
+            <p><strong>Phone: </strong>${salon.pets[i].phone}</p>
+            <p><strong>Price: </strong>$${salon.pets[i].price}</p>
             </div>`
         //concatenate all the info
     document.getElementById("pets").innerHTML+=tmp;
