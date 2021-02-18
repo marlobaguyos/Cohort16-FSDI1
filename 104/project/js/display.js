@@ -1,8 +1,15 @@
 function display(){
+    //display the number of pets
+    document.getElementById("numberPets").innerHTML=`Registered pets: ${salon.pets.length}`;
     //clear the field
     document.getElementById("pets").innerHTML="";
     //travel the pet's array
     for(var i=0;i<salon.pets.length;i++){
+        //assign a price for each service(TIP: you have to use if)
+        //nails -> , shower -> 20, hair -> 15, full ->25
+        if(salon.pets[i].service==="nails"){
+            salon.pets[i].price=15;
+        }
         //create a tmp
             var tmp=`<div class="pet"> 
             <h3>${salon.pets[i].name}</h3>
