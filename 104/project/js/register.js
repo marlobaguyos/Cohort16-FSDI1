@@ -54,5 +54,26 @@ salon.pets.push(speedy);
 console.log(salon.pets);
     //create the function register
     function register(){
-        
+        var txtName=document.getElementById("petNameTxt");
+        var txtAge=document.getElementById("petAgeTxt");
+        var txtBreed=document.getElementById("petBreedTxt");
+        var txtGender=document.getElementById("petGenderTxt")
+        var txtService=document.getElementById("petServiceTxt");
+        var txtOwner=document.getElementById("OwnerNameTxt");
+        var txtPhone=document.getElementById("ownerPhoneTxt");
+
+        console.log(txtName.value);
+        console.log(txtAge.value);
+        console.log(txtBreed.value);
+        console.log(txtGender.value);
+        console.log(txtService.value);
+        console.log(txtOwner.value);
+        console.log(txtPhone.value);
+
+        //create a generic constructor
+        // var thePet=new Pet(txtName.nodeValue,txtAge.value,txtBreed.value,txtGender.value,txtService.value,txtOwner.value,txtPhone.value);
+        // console.log(thePet);
+    
+        //push the pet into the array
+        // salon.pets.push(thePet);
     }
