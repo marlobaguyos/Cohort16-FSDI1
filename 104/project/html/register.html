@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>The Fashuion Pet</title>
@@ -12,7 +13,7 @@
 
 <body>
     <header>
-        <h1>Register</h1>
+        <h1>The Fashuion Pet</h1>
     </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -32,8 +33,40 @@
         </div>
     </nav>
     <main>
-        <h2>Register</h2>
+        <h2 class="text-center">Register</h2>
+        <!--name,age,breed,gender,service,owner,phone-->
+        <div class="container">
+            <form action="#">
+                <input type="text" id="petNameTxt" class="form-control" placeholder="Enter pet's name"><br>
+                <input type="number" name="age" id="petAgeTxt" class="form-control" placeholder="Enter pet's age"><br>
+                <input type="text" id="petBreedTxt" class="form-control" placeholder="Enter pet's breed"><br>
+                <input type="text" id="petGenderTxt" class="form-control" placeholder="Enter pet's gender"><br>
+                <!-- <input type="text" id="petServiceTxt" class="form-control" placeholder="Enter pet's service"><br> -->
+                <select name="service" id="petServiceTxt" class="form-control">
+                    <option disable selected>--- Select an option ---</option>
+                    <option value="nails">Nails cut</option>
+                    <option value="hair">Hair cut</option>
+                    <option value="shower">Shower</option>
+                    <option value="full">Full Service</option>
+                </select><br>
+                <input type="text" id="ownerNameTxt" class="form-control" placeholder="Enter owner's name"><br>
+                <input type="text" id="ownerPhoneTxt" class="form-control" placeholder="Enter contact phone"><br>
+            </form>
+            <button class="btn btn-dark" onclick="register()">Register</button>
+        </div>
+        <div class="info container">
+            <p id="numberPets">Registered pets: 10</p>
+            <p id="profits">Profits: $0.00</p>
+        </div>
+        <div id="pets" class="container">
+
+        </div>
     </main>
+    <footer id="footer-text">
+
+    </footer>
+    <script src="../js/register.js"></script>
+    <script src="../js/display.js"></script>
 </body>
 
 </html>
