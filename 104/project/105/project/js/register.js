@@ -94,7 +94,7 @@ function init(){
     display(speedy);
     console.log(salon.pets);
     displayInfo();
-   
+
     //hook
 }
 window.onload=init;

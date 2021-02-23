@@ -10,24 +10,14 @@ const salon={
     },
     pets:[]
 }
+function displayInfo(){
 document.getElementById("footer-text").innerHTML=`
     <p>${salon.name}</p>
     <p>${salon.address.street}, ${salon.address.number}</p>
     <p>It's open from ${salon.hours.open} to ${salon.hours.close}</p>
 `;
+}
 
-// for(var i=0;i<5;i++){
-//     var numPets = `
-//         <p>Number of Pet registered: ${salon.pets.length}</p>
-//         `
-//     document.getElementById("total").innerHTML=numPets;
-//     var petName=`
-//         <p>${salon.pets[i].name}</p>
-//         `
-//     document.getElementById("pets").innerHTML+=petName
-// }
-
-//create the pet class
     class Pet{
         constructor(name,age,breed,gender,service,owner,phone){
             this.name=name;
@@ -95,4 +85,26 @@ function profitCalculation(){
     document.getElementById("profits").innerHTML=`${sum}`;
 }
 
+function init(){
+    //default,,,
+    console.log
+}
+
+function init(){
+    //default
+    console.log("Initialization");
+    // push the pets into the array
+    //salon.pets=[scooby,scrapy,speedy];
+    salon.pets.push(scooby);
+    salon.pets.push(scrapy);
+    salon.pets.push(speedy);
+    display(scooby);
+    display(scrapy);
+    display(speedy);
+    console.log(salon.pets);
+    displayInfo();
+
+    //hook
+}
+window.onload=init;
 
