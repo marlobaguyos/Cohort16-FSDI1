@@ -16,6 +16,7 @@ document.getElementById("footer-text").innerHTML=`
     <p>${salon.address.street}, ${salon.address.number}</p>
     <p>It's open from ${salon.hours.open} to ${salon.hours.close}</p>
 `;
+
 }
 
     class Pet{
@@ -36,13 +37,6 @@ var scooby=new Pet("Scooby",50,"Dane","Male","Full Service","Shaggy","555-555-55
 var scrapy=new Pet("Scrapy",40,"Dane","Male","Shower","Shaggy","555-555-5555");
 var speedy=new Pet("Speedy",80,"Mixed","Male","Nails cut","Bunny","333-333-3333");
 console.log(scooby,scrapy,speedy);
-
-//push the pets into the array
-//salon.pets=[scooby,scrapy,speedy];
-salon.pets.push(scooby);
-salon.pets.push(scrapy);
-salon.pets.push(speedy);
-console.log(salon.pets);
 
 var txtName=document.getElementById("petNameTxt");
 var txtAge=document.getElementById("petAgeTxt");
@@ -69,7 +63,7 @@ function register(){
     // push the pet into the array
     salon.pets.push(thePet);
     // display function
-    display(thePet);
+    display();
     clear();
 }
 
@@ -82,7 +76,7 @@ function profitCalculation(){
         sum=sum+salon.pets[i].price;
     }
     //display the result on the html
-    document.getElementById("profits").innerHTML=`${sum}`;
+    document.getElementById("profits").innerHTML=`<stron>Profit:</strong> ${sum}`;
 }
 
 function init(){
@@ -101,9 +95,8 @@ function init(){
     display(scooby);
     display(scrapy);
     display(speedy);
-    console.log(salon.pets);
     displayInfo();
-
+    display();
     //hook
 }
 window.onload=init;

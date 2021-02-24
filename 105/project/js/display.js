@@ -33,5 +33,3 @@ function display(){
     }
     profitCalculation();
 }
-//use the function
-display();
