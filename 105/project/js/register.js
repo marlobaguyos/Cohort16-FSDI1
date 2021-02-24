@@ -36,7 +36,6 @@ document.getElementById("footer-text").innerHTML=`
 var scooby=new Pet("Scooby",50,"Dane","Male","Full Service","Shaggy","555-555-5555");
 var scrapy=new Pet("Scrapy",40,"Dane","Male","Shower","Shaggy","555-555-5555");
 var speedy=new Pet("Speedy",80,"Mixed","Male","Nails cut","Bunny","333-333-3333");
-console.log(scooby,scrapy,speedy);
 
 var txtName=document.getElementById("petNameTxt");
 var txtAge=document.getElementById("petAgeTxt");
