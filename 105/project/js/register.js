@@ -79,11 +79,6 @@ function profitCalculation(){
 }
 
 function init(){
-    //default,,,
-    console.log
-}
-
-function init(){
     //default
     console.log("Initialization");
     // push the pets into the array
