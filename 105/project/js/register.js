@@ -10,41 +10,43 @@ const salon={
     },
     pets:[]
 }
-function displayInfo(){
-document.getElementById("footer-text").innerHTML=`
-    <p>${salon.name}</p>
-    <p>${salon.address.street}, ${salon.address.number}</p>
-    <p>It's open from ${salon.hours.open} to ${salon.hours.close}</p>
-`;
 
+function displayInfo(){
+    document.getElementById("footer-text").innerHTML=`
+    <p> ${salon.name} </p>
+    <p> ${salon.address.street}, ${salon.address.number} </p>
+    <p> It opens from ${salon.hours.open} to ${salon.hours.close}</p>
+    `;
 }
 
-    class Pet{
-        constructor(name,age,breed,gender,service,owner,phone){
-            this.name=name;
-            this.age=age;
-            this.breed=breed;
-            this.gender=gender;
-            this.service=service;
-            this.owner=owner;
-            this.phone=phone;
-            this.price=0;
-        }
+// create the Pet class
+class Pet{
+    constructor(name,age,breed,gender,service,owner,phone){
+        this.name=name;
+        this.age=age;
+        this.breed=breed;
+        this.gender=gender;
+        this.service=service;
+        this.owner=owner;
+        this.phone=phone;
+        this.price=0;
     }
+}
+// create pets using the constructor
+var scooby=new Pet("Scooby",50,"Dane","Male","full","Shaggy","555-555-555");
+var scrapy=new Pet("Scrapy",40,"Dane","Male","shower","Shaggy","555-555-555");
+var speedy = new Pet("Speedy",80,"Mixed","Male","nails","Bunny","333-333-333");
 
-//create pets using the constructor
-var scooby=new Pet("Scooby",50,"Dane","Male","Full Service","Shaggy","555-555-5555");
-var scrapy=new Pet("Scrapy",40,"Dane","Male","Shower","Shaggy","555-555-5555");
-var speedy=new Pet("Speedy",80,"Mixed","Male","Nails cut","Bunny","333-333-3333");
+
 
 var txtName=document.getElementById("petNameTxt");
 var txtAge=document.getElementById("petAgeTxt");
 var txtBreed=document.getElementById("petBreedTxt");
-var txtGender=document.getElementById("petGenderTxt")
+var txtGender=document.getElementById("petGenderTxt");
 var txtService=document.getElementById("petServiceTxt");
 var txtOwner=document.getElementById("ownerNameTxt");
 var txtPhone=document.getElementById("ownerPhoneTxt");
-    
+
 function clear(){
     txtName.value="";
     txtAge.value="";
@@ -62,20 +64,21 @@ function register(){
     // push the pet into the array
     salon.pets.push(thePet);
     // display function
-    display();
+    display(thePet);
     clear();
 }
 
 function profitCalculation(){
     //create a variable sum and initializate the variable
     var sum=0;
-    //travel the salon.pets[] (for)
+    // travel the salon.pets[] (for)
     for(var i=0;i<salon.pets.length;i++){
         //sum all the prices
         sum=sum+salon.pets[i].price;
     }
-    //display the result on the html
-    document.getElementById("profits").innerHTML=`<stron>Profit:</strong> ${sum}`;
+
+     // display the result on the html
+    document.getElementById("profits").innerHTML=`Profits: $${sum}`;
 }
 
 function init(){
@@ -89,9 +92,9 @@ function init(){
     display(scooby);
     display(scrapy);
     display(speedy);
+    console.log(salon.pets);
     displayInfo();
-    display();
+
     //hook
 }
 window.onload=init;
-
