@@ -26,11 +26,12 @@ function display(aPet){
         <p>Service: ${aPet.service}</p>
         <p>Owner: ${aPet.owner}</p>
         <p>Phone: ${aPet.phone}</p>
-        <p>$${aPet.price}</p> </div>`;
+        <p>$${aPet.price}</p> 
+        </div>`;
     // concatenate all the info and display on html
     document.getElementById("pets").innerHTML+=tmp;
     //}
-    //document.getElementById("pets").appendChild(tmp);
+    // document.getElementById("pets").appendChild(tmp);
     profitCalculation();
 }
 
