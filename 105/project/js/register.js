@@ -13,9 +13,17 @@ const salon={
 
 function displayInfo(){
     document.getElementById("footer-text").innerHTML=`
-    <ul class="navbar-nav"> ${salon.name} </ul>
-    <li> ${salon.address.street}, ${salon.address.number} </li>
-    <li> It opens from ${salon.hours.open} to ${salon.hours.close}</li>
+    <ul class="navbar-nav container-fluid collapse navbar-collapse">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"> ${salon.name}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="services.html">${salon.address.street}, ${salon.address.number} </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="register.html">Hous: ${salon.hours.open} to ${salon.hours.close}</a>
+        </li>
+    </ul>
     `;
 }
 

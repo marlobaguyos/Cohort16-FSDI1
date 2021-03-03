@@ -31,7 +31,6 @@ function display(aPet) {
 
     var table = `
             <trm id="${aPet.id}">
-                <th scope="row">1</th>
                 <td>${aPet.name}</td>
                 <td>${aPet.age}</td>
                 <td>${aPet.gender}</td>
