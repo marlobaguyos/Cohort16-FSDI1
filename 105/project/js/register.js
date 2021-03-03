@@ -13,11 +13,19 @@ const salon={
 
 function displayInfo(){
     document.getElementById("footer-text").innerHTML=`
-    <p> ${salon.name} </p>
-    <p> ${salon.address.street}, ${salon.address.number} </p>
-    <p> It opens from ${salon.hours.open} to ${salon.hours.close}</p>
+    <ul class="navbar-nav"> ${salon.name} </ul>
+    <li> ${salon.address.street}, ${salon.address.number} </li>
+    <li> It opens from ${salon.hours.open} to ${salon.hours.close}</li>
     `;
 }
+
+// function displayInfo(){
+//     document.getElementById("footer-text").innerHTML=`
+//     <ul class="navbar-nav"> ${salon.name} </ul>
+//     <li> ${salon.address.street}, ${salon.address.number} </li>
+//     <li> It opens from ${salon.hours.open} to ${salon.hours.close}</li>
+//     `;
+// }
 var c=0;
 // create the Pet class
 class Pet{
