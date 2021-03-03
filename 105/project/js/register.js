@@ -18,7 +18,7 @@ function displayInfo(){
     <p> It opens from ${salon.hours.open} to ${salon.hours.close}</p>
     `;
 }
-
+var c=0;
 // create the Pet class
 class Pet{
     constructor(name,age,breed,gender,service,owner,phone){
@@ -30,6 +30,7 @@ class Pet{
         this.owner=owner;
         this.phone=phone;
         this.price=0;
+        this.id=c++;
     }
 }
 // create pets using the constructor
@@ -79,6 +80,10 @@ function profitCalculation(){
 
      // display the result on the html
     document.getElementById("profits").innerHTML=`Profits: $${sum}`;
+}
+
+function deletePet(petId){
+    $('#'+petId).remove();
 }
 
 function init(){

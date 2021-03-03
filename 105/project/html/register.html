@@ -15,7 +15,7 @@
     <header>
         <h1>The Fashion Pet</h1>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -61,17 +61,37 @@
             <p id="numberPets">Registered pets: 10</p>
             <p id="profits"></p>
         </div>
-        <div id="pets" class="container">
+        <div class="mytable container">
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Breed</th>
+                        <th scope="col">Service</th>
+                        <th scope="col">Owner</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="pets">
+                    
+                </tbody>
+            </table>
 
         </div>
     </main>
-    <footer id="footer-text container">
+    <hr>
+    <footer class="container navbar navbar-light bg-light" id="footer-text">
         <p class="footer">Footer</p>
     </footer>
-    <!-- <script src="../js/register.js"></script>
-    <script src="../js/display.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/105/practice/practice3.js"></script> 
+    <script src="../js/register.js"></script>
+    <script src="../js/display.js"></script>
+    <!-- <script src="/105/practice/practice3.js"></script>  -->
 </body>
 
 </html>
