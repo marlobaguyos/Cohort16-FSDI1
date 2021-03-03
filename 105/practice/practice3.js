@@ -32,5 +32,5 @@ $('footer').on({
 });
 
 $('footer').on('click', function(){
-    $(this).text('this is the changed text');
+    $(this).text('Footer is this?');
 });
