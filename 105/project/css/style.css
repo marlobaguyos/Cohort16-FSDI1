@@ -1,3 +1,4 @@
+
 #pets{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -13,4 +14,17 @@
 
 .bordered{
     border: 1px solid red;
+}
+
+.red-bg{
+    background-color: #ffc8c8;
+}
+
+.active-test{
+    border:2px solid black;
+    background-color: #dedede;
+}
+
+.footer{
+    text-align: center;
 }
