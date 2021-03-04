@@ -30,7 +30,7 @@ function display(aPet) {
     //     <button >Delete</button></div>`;
 
     var table = `
-            <trm id="${aPet.id}">
+            <tr id="${aPet.id}">
                 <td>${aPet.name}</td>
                 <td>${aPet.age}</td>
                 <td>${aPet.gender}</td>
@@ -41,7 +41,7 @@ function display(aPet) {
                 <td>$${aPet.price}</td>
                 <td><button onclick="">Delete</button></td>
             </tr>
-    `;
+            `;
     // concatenate all the info and display on html
     // document.getElementById("pets").innerHTML += tmp;
     document.getElementById("pets").innerHTML += table;
