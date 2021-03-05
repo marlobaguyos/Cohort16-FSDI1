@@ -101,7 +101,7 @@ function deletePet(petId) {
             //remove from html
             $('#'+petId).remove();
             //remove from the array
-            salon.pets.splice(petId,1);
+            salon.pets.splice(i,1);
         }
     }
     profitCalculation();
