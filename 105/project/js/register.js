@@ -108,6 +108,19 @@ function deletePet(petId) {
     document.getElementById("numberPets").innerHTML = `Registered pets: ${salon.pets.length}`;
 }
 
+function search(){
+    var string=$('#petSearch').val();
+    var searchString=string.toLowerCase();
+    for(var i=0;i<salon.pets.length;i++){
+        var selected=salon.pets[i];
+        if(string===selected.name.toLowerCase()){
+            $('#'+selected.id).addClass('selected');
+        }else{
+            $('#'+selected.id).removeClass('selected');
+        }
+    }
+}
+
 function init() {
     //default
     console.log("Initialization");
@@ -122,6 +135,8 @@ function init() {
     console.log(salon.pets);
     displayInfo();
 
-    //hook
+    //hook events
+    $('#btn-register').on('click',register);
+    $('#btn-search').on('click',search);
 }
 window.onload = init;

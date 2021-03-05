@@ -32,10 +32,10 @@
                         <a class="nav-link" href="task.html" tabindex="-1" aria-disabled="true">Task</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                <div class="d-flex">
+                    <input id="petSearch" name="petSearch" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button id="btn-search"class="btn btn-outline-success" type="submit">Search</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -59,7 +59,7 @@
                 <input type="text" id="ownerNameTxt" class="form-control" placeholder="Enter owner's name"><br>
                 <input type="text" id="ownerPhoneTxt" class="form-control" placeholder="Enter contact phone"><br>
             </form>
-            <button class="btn btn-dark" onclick="register()">Register</button>
+            <button id="btn-register" class="btn btn-dark" onclick="register()">Register</button>
         </div>
         <div class="info container">
             <p id="numberPets">Registered pets: 10</p>
