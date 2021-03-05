@@ -143,6 +143,6 @@ function init() {
         if(e.key==="Enter"){
             search();
         }
-    })
+    });
 }
 window.onload = init;
