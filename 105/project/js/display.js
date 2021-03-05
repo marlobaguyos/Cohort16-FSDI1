@@ -39,7 +39,7 @@ function display(aPet) {
                 <td>${aPet.owner}</td>
                 <td>${aPet.phone}</td>
                 <td>$${aPet.price}</td>
-                <td><button onclick="">Delete</button></td>
+                <td><button onclick="deletePet(${aPet.id})" >Delete</button></td>
             </tr>
             `;
     // concatenate all the info and display on html

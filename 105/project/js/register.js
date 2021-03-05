@@ -94,7 +94,18 @@ function profitCalculation() {
 }
 
 function deletePet(petId) {
-    $('#' + petId).remove();
+    //travel the array
+    for(var i=0;i<salon.pets.length;i++){
+        var pet = salon.pets[i];
+        if(pet.id == petId){
+            //remove from html
+            $('#'+petId).remove();
+            //remove from the array
+            salon.pets.splice(petId,1);
+        }
+    }
+    profitCalculation();
+    document.getElementById("numberPets").innerHTML = `Registered pets: ${salon.pets.length}`;
 }
 
 function init() {
