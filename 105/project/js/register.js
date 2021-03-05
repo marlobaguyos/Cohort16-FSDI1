@@ -113,10 +113,11 @@ function search(){
     var searchString=string.toLowerCase();
     for(var i=0;i<salon.pets.length;i++){
         var selected=salon.pets[i];
-        if(string===selected.name.toLowerCase()){
-            $('#'+selected.id).addClass('selected');
+        if(selected.name.toLowerCase().includes(searchString)||selected.service.toLowerCase().includes(searchString)){
+            $('#'+selected.id).show();//addClass('selected');
         }else{
-            $('#'+selected.id).removeClass('selected');
+            $('#'+selected.id).hide();//removeClass('selected');
+            // $('#pets').html("<h2>It doesn't exist</h2>")
         }
     }
 }
@@ -138,5 +139,10 @@ function init() {
     //hook events
     $('#btn-register').on('click',register);
     $('#btn-search').on('click',search);
+    $('#petSearch').keypress(function(e){
+        if(e.key==="Enter"){
+            search();
+        }
+    })
 }
 window.onload = init;
