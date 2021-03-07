@@ -1,7 +1,10 @@
 function saveTodo() {
-    console.log("Button Clicked");
     let text=$("#txtTodo").val(); //get the text of the input
-    console.log(text);
+    $("#txtTodo").val("");
+
+    //create To Do's
+    var syntax = "<div>" + text + "</div>";
+    $(".todo-list").append(syntax);
 }
 
 function init() {
