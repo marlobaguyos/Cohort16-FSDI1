@@ -6,7 +6,20 @@ body {
 
 h1 {
     color: white;
-    background-color: rgb(36, 35, 35);
+    background-color: rgb(17, 82, 143);
     text-align: center;
     padding:10px 0;
+}
+
+.todo-form {
+    border: 1px solid rgb(17, 82, 143);
+    width: 370px;
+    padding: 25px 20px;
+    background-color: azure;
+    border-radius: 8px;
+    margin: 30px auto 10px auto;
+}
+
+.todo-form input {
+    margin-top: -2px;
 }
