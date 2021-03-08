@@ -34,7 +34,11 @@ function saveTask(){
 }
 
 function displayTask(task){
+    //create the syntax
+    var syntax = "<div>" + task.title + "</div>";
 
+    //append the syntax to existing html
+    $("#tasks-list").append(syntax);
 }
 
 function init(){

@@ -39,7 +39,7 @@ h1 {
     padding: 1rem 2rem;
 }
 
-#list {
+#task-list {
     flex: 2;
     background-color: azure;
 }
