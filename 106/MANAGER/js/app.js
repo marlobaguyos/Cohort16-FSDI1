@@ -16,14 +16,16 @@ function toggleImportant(){
 
 function saveTask(){
     console.log("Saved clicked");
+
     let title = $("#txtTitle").val();
     var date = $("#txtDateTime").val();
-    var priority = $("#sel-priority").val();
-    var description = $("#txtDescription").val();
     var status = $("#selStatus").val();
     var location = $("#txtLocation").val();
+    var color = $("#selColor").val();
+    var description = $("#txtDescription").val();
+    
 
-    console.log(title, date, priority, description,status,location);
+    console.log(title,date,status,location,color,description);
 }
 
 function init(){
