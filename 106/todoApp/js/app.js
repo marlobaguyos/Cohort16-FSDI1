@@ -3,7 +3,7 @@ function saveTodo() {
     $("#txtTodo").val("");
 
     //create To Do's
-    var syntax = "<div>" + text + "</div>";
+    var syntax = "<div class='todo-item'>" + text + "</div>";
     $(".todo-list").append(syntax);
 }
 
