@@ -38,11 +38,12 @@ function displayTask(task){
     var syntax = "<div>" + task.title + "</div>";
 
     //append the syntax to existing html
-    $("#tasks-list").append(syntax);
+    $("#task-list").append(syntax);
 }
 
 function init(){
     console.log("Task Manager");
+
 
     $("#iImportant").click(toggleImportant);
     $("#btn-save").click(saveTask);
