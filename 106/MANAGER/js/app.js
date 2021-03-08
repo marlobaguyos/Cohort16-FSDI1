@@ -22,10 +22,19 @@ function saveTask(){
     var status = $("#selStatus").val();
     var location = $("#txtLocation").val();
     var color = $("#selColor").val();
-    var description = $("#txtDescription").val();
+    var desc = $("#txtDescription").val();
     
+    var myTask = new Task(0,title,isItImportant,date,status,location,color,desc);
 
-    console.log(title,date,status,location,color,description);
+    console.log(myTask);
+    // save to server
+
+    // display task
+    displayTask(myTask);
+}
+
+function displayTask(task){
+
 }
 
 function init(){
@@ -36,7 +45,6 @@ function init(){
 }
 
 window.onload = init;
-
 
 /*
 Task
