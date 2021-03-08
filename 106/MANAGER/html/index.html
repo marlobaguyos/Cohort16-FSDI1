@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="../css/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1 class="container title">Task Manager</h1>
+
+    <div class="container">
+        <main class="content">
+            <section id="capture">
+                <form class="capture-form">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default"
+                            style="font-weight: 700;">ID</span>
+                        <input type="text" class="form-control" id="txt-Id" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="ID">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default"
+                            style="font-weight: 700;">Title</span>
+                        <input type="text" class="form-control" id="txt-Title" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Enter Title">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="font-weight: 700;">Date &
+                            Time</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default"
+                            placeholder="Enter Date $ Time: Month/Day/Year 12:00 AM/PM">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default"
+                            style="font-weight: 700;">Priority</span>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected disabled>--- Please Select Priority ---</option>
+                            <option value="1">Low</option>
+                            <option value="2">Medium</option>
+                            <option value="3">High</option>
+                            <option value="3">Critical</option>
+                        </select>
+                    </div>
+
+                    <div class="control">
+                            <label for="">Is it Important?:</label>
+                            <i id="iImportant" class="far fa-star"></i>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" style="font-weight: 700">Description</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default"
+                            style="font-weight: 700;">Status</span>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected disabled>--- Please Select Status ---</option>
+                            <option value="1">Blocked</option>
+                            <option value="2">Commited</option>
+                            <option value="3">Deleted</option>
+                            <option value="3">Done</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default"
+                            style="font-weight: 700;">Location</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Please Enter Location">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default"
+                            style="font-weight: 700;">Color</span>
+                            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                            <label class="btn btn-secondary" for="option1" style="background-color:purple;">Purple</label>
+                            
+                            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                            <label class="btn btn-secondary" for="option2" style="background-color:Pink;">Pink</label>
+                            
+                            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                            <label class="btn btn-secondary" for="option3" style="background-color:red;">Red</label>
+                            
+                            <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                            <label class="btn btn-secondary" for="option4" style="background-color:#1c87c9;">Blue</label>
+                    </div>
+                    <div class="btn-div">
+                        <button class="btn-save" id="btn-save" type="button" style="background-color:rgb(207, 203, 203);color: rgb(34, 36, 36);">
+                            Save
+                        </button>
+                    </div>
+                </form>
+                
+            </section>
+            <section id="list">
+
+            </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/app.js"></script>
+
+</body>
+
+</html>
