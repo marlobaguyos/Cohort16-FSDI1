@@ -28,9 +28,14 @@ namespace taskManager.Controllers
             return View();
         }
 
+        public IActionResult Test()
+        {
+            return Content("Your are Awesome");
+        }
+
         public IActionResult About()
         {
-            return Content("Marlo");
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
