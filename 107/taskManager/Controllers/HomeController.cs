@@ -28,6 +28,11 @@ namespace taskManager.Controllers
             return View();
         }
 
+        public IActionResult About()
+        {
+            return Content("Marlo");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

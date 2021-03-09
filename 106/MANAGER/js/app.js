@@ -21,7 +21,7 @@ function saveTask(){
     var date = $("#txtDateTime").val();
     var status = $("#selStatus").val();
     var location = $("#txtLocation").val();
-    var color = $("#selColor").val();
+    var color = $("#txtColor").val();
     var description = $("#txtDescription").val();
     
     var myTask = new Task(0,title,isItImportant,date,status,location,color,description);
@@ -52,6 +52,10 @@ function displayTask(task){
 
 function init(){
     console.log("Task Manager");
+
+    // $('#txtColor').spectrum({
+    //     type: "component"
+    // });
 
 
     $("#iImportant").click(toggleImportant);
