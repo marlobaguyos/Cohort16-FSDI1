@@ -57,7 +57,6 @@ function init(){
     $("#iImportant").click(toggleImportant);
     $("#btn-save").click(saveTask);
 }
-
 window.onload = init;
 
 /*
