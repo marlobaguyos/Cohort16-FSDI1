@@ -22,9 +22,9 @@ function saveTask(){
     var status = $("#selStatus").val();
     var location = $("#txtLocation").val();
     var color = $("#selColor").val();
-    var desc = $("#txtDescription").val();
+    var description = $("#txtDescription").val();
     
-    var myTask = new Task(0,title,isItImportant,date,status,location,color,desc);
+    var myTask = new Task(0,title,isItImportant,date,status,location,color,description);
 
     console.log(myTask);
     // save to server
@@ -35,7 +35,16 @@ function saveTask(){
 
 function displayTask(task){
     //create the syntax
-    var syntax = "<div>" + task.title + "</div>";
+    var syntax = "<div class='card-title'>" + task.title + "</div>";
+
+    var syntax = `<div class="card-body myTask">
+                    <h5 class="card-title">${task.title}</h5>
+                    <p class="card-text">Date: ${task.date}</p>
+                    <p class="card-text">${task.status}</p>
+                    <p class="card-text">${task.location}</p>
+                    <p class="card-text">${task.color}</p>
+                    <p class="card-text">${task.description}</p>
+                    </div>`
 
     //append the syntax to existing html
     $("#task-list").append(syntax);
