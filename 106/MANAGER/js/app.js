@@ -98,9 +98,6 @@ function testRequest(){
 function init(){
     console.log("Task Manager");
 
-    // $('#txtColor').spectrum({
-    //     type: "component"
-    // });
 
 
     $("#iImportant").click(toggleImportant);
