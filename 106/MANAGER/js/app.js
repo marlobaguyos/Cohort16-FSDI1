@@ -54,7 +54,7 @@ function displayTask(task){
                         </div>
 
                         <div class="p-2 flex-fill bd-highlight testBorder">
-                        <i class="fas fa-dumpster" onclick="deleteTask()"></i>
+                        <i class="fas fa-dumpster" onclick="deleteTask(${task.id}"></i>
                         </div>
                     </div>
                     </div>`
@@ -65,8 +65,8 @@ function displayTask(task){
     $("#task-list").append(syntax);
 }
 
-function deleteTask(){
-    console.log("Should delete a task");
+function deleteTask(id){
+    console.log("Should delete a task", id);
 }
 
 function init(){
