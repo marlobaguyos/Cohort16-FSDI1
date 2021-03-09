@@ -67,7 +67,7 @@ function displayTask(task){
                         </div>
 
                         <div class="p-2 flex-fill bd-highlight testBorder">
-                        <i class="fas fa-dumpster" onclick="deleteTask(${task.id}"></i>
+                        <i class="fas fa-dumpster" onclick="deleteTask(${task.id})"></i>
                         </div>
                     </div>
                     </div>`
@@ -106,7 +106,7 @@ function init(){
     $("#iImportant").click(toggleImportant);
     $("#btn-save").click(saveTask);
     $("#btnDetails").click(toggleDetailsVisibility);
-    
+
 }
 window.onload = init;
 
