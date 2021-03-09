@@ -1,5 +1,7 @@
 task = [];
 var isItImportant = false;
+var isDetailsVisible = true;
+var serverUrl = "http://fsdi.azurewebsites.net/api";
 
 // Jump from One State to another State on and off - Bit 1 to 0 or to 0 to 1
 function toggleImportant(){
@@ -26,11 +28,22 @@ function saveTask(){
     
     var myTask = new Task(0,title,isItImportant,date,status,location,color,description);
 
-    console.log(myTask);
     // save to server
+    $.ajax({
+        url: serverUrl + '/tasks',
+        type: "POST",
+        data: JSON.stringify(myTask),
+        contentType: "application/json",
 
-    // display task
-    displayTask(myTask);
+        success: function(res){
+            console.log("Server says: ", res);
+            // display task
+            displayTask(res);
+        },
+        error: function(errorDet){
+            console.log("Error", errorDet);
+        }
+    });
 }
 
 function displayTask(task){
@@ -92,6 +105,8 @@ function init(){
 
     $("#iImportant").click(toggleImportant);
     $("#btn-save").click(saveTask);
+    $("#btnDetails").click(toggleDetailsVisibility);
+    
 }
 window.onload = init;
 
