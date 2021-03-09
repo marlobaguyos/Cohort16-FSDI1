@@ -44,10 +44,6 @@ h1 {
     background-color: azure;
 }
 
-.listSec {
-    
-}
-
 .card-title {
     border-bottom: 2px solid black;
     margin-bottom: 0;
@@ -57,4 +53,7 @@ h1 {
     margin-bottom: 0;
 }
 
+.testBorder {
+    border: 2px solid red;
+}
 
