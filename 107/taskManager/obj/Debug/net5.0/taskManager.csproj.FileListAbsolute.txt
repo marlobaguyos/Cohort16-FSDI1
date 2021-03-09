@@ -39,3 +39,4 @@ C:\Users\marlo\Documents\GitHub\Cohort16-FSDI1\107\taskManager\obj\Debug\net5.0\
 C:\Users\marlo\Documents\GitHub\Cohort16-FSDI1\107\taskManager\obj\Debug\net5.0\taskManager.genruntimeconfig.cache
 C:\Users\marlo\Documents\GitHub\Cohort16-FSDI1\107\taskManager\obj\Debug\net5.0\taskManager.csproj.CopyComplete
 C:\Users\marlo\Documents\GitHub\Cohort16-FSDI1\107\taskManager\obj\Debug\net5.0\Razor\Views\Home\about.cshtml.g.cs
+C:\Users\marlo\Documents\GitHub\Cohort16-FSDI1\107\taskManager\obj\Debug\net5.0\Razor\Views\Home\Tasks.cshtml.g.cs

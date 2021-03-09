@@ -15608,6 +15608,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\marlo\\Documents\\GitHub\\Cohort16-FSDI1\\107\\taskManager\\Views\\Home\\Tasks.cshtml",
+      "TargetPath": "Views\\Home\\Tasks.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\marlo\\Documents\\GitHub\\Cohort16-FSDI1\\107\\taskManager\\Views\\Home\\about.cshtml",
       "TargetPath": "Views\\Home\\about.cshtml",
       "FileKind": "mvc"
