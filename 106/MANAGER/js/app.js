@@ -35,7 +35,6 @@ function saveTask(){
 
 function displayTask(task){
     //create the syntax
-    var syntax = "<div class='card-title'>" + task.title + "</div>";
 
     var syntax = `<div class="card-body myTask">
                     <h5 class="card-title">${task.title}</h5>

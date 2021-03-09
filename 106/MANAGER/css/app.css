@@ -3,10 +3,10 @@ h1 {
     color: azure;
 }
 
-/* .h1-taskList {
+.h1-taskList {
     text-align: center;
     color: rgb(53, 51, 51);
-} */
+}
 
 .content {
     display: flex;
@@ -44,15 +44,13 @@ h1 {
     background-color: azure;
 }
 
-/* .card {
-    margin: 9px 30px 5px 30px;
-    background-color: white;
-    border: 1px solid rgb(211,215,216);
-    border-radius: 4px;
-    padding: 12px 25px;
-    font-size: 18px;
-    color: #333;
-    box-shadow: 0 2px 2px #d8d8d8;
-} */
+.card-title {
+    border-bottom: 2px solid black;
+    margin-bottom: 0;
+}
+
+.card-text {
+    margin-bottom: 0;
+}
 
 
