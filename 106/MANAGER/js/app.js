@@ -69,6 +69,19 @@ function deleteTask(id){
     console.log("Should delete a task", id);
 }
 
+function testRequest(){
+    $.ajax({
+        url:"https://restclass.azurewebsites.net/api/test",
+        type:"GET",
+        success: function(res){
+            console.log("Yeei it worked!!", res);
+        },
+        error: function(errorDetails){
+            console.log("Oucch we have an error:(", errorDetails);
+        }
+    });
+}
+
 function init(){
     console.log("Task Manager");
 
