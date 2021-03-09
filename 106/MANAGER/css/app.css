@@ -3,10 +3,10 @@ h1 {
     color: azure;
 }
 
-.h1-taskList {
+/* .h1-taskList {
     text-align: center;
     color: rgb(53, 51, 51);
-}
+} */
 
 .content {
     display: flex;
