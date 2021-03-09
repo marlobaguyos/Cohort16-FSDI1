@@ -3,6 +3,16 @@ var isItImportant = false;
 var isDetailsVisible = true;
 var serverUrl = "http://fsdi.azurewebsites.net/api";
 
+function toggleDetailVisibility(){
+    if(isDetailsVisible){
+        $("#hideList").hide();
+        isDetailsVisible = false;
+    }else{
+        $("#hideList").show();
+        isDetailsVisible = true;
+    };
+}
+
 // Jump from One State to another State on and off - Bit 1 to 0 or to 0 to 1
 function toggleImportant(){
     console.log("Icon clicked");
@@ -49,7 +59,7 @@ function saveTask(){
 function displayTask(task){
     //create the syntax
 
-    var syntax = `<div class="testBorder">
+    var syntax = `<div class="testBorder" id="hideList">
                     <div class="d-flex bd-highlight testBorder">
                         <div class="p-2 flex-fill bd-highlight testBorder">
                         <i class="far fa-star task-star task-section-sm"></i>
@@ -102,7 +112,7 @@ function init(){
 
     $("#iImportant").click(toggleImportant);
     $("#btn-save").click(saveTask);
-    $("#btnDetails").click(toggleDetailsVisibility);
+    $("#btnDetails").click(toggleDetailVisibility);
 
 }
 window.onload = init;
