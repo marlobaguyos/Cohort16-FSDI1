@@ -3,30 +3,30 @@ var isItImportant = false;
 var isDetailsVisible = true;
 var serverUrl = "http://fsdi.azurewebsites.net/api";
 
-function toggleDetailVisibility(){
-    if(isDetailsVisible){
+function toggleDetailVisibility() {
+    if (isDetailsVisible) {
         $("#hideList").hide();
         isDetailsVisible = false;
-    }else{
+    } else {
         $("#hideList").show();
         isDetailsVisible = true;
     };
 }
 
 // Jump from One State to another State on and off - Bit 1 to 0 or to 0 to 1
-function toggleImportant(){
+function toggleImportant() {
     console.log("Icon clicked");
 
-    if(!isItImportant){
+    if (!isItImportant) {
         $("#iImportant").removeClass("far").addClass("fas");
         isItImportant = true;
-    }else{
+    } else {
         isItImportant = false;
         $("#iImportant").removeClass("fas").addClass("far");
     };
 }
 
-function saveTask(){
+function saveTask() {
     console.log("Saved clicked");
 
     let title = $("#txtTitle").val();
@@ -35,8 +35,8 @@ function saveTask(){
     var location = $("#txtLocation").val();
     var color = $("#txtColor").val();
     var description = $("#txtDescription").val();
-    
-    var myTask = new Task(0,title,isItImportant,date,status,location,color,description);
+
+    var myTask = new Task(0, title, isItImportant, date, status, location, color, description);
 
     // save to server
     $.ajax({
@@ -45,18 +45,21 @@ function saveTask(){
         data: JSON.stringify(myTask),
         contentType: "application/json",
 
-        success: function(res){
+        success: function (res) {
             console.log("Server says: ", res);
             // display task
             displayTask(res);
         },
-        error: function(errorDet){
+        error: function (errorDet) {
             console.log("Error", errorDet);
         }
     });
+    //clear form
+    $("#taskform").trigger("reset");
 }
 
-function displayTask(task){
+
+function displayTask(task) {
     //create the syntax
 
     var syntax = `<div class="testBorder" id="hideList">
@@ -80,32 +83,58 @@ function displayTask(task){
                         <i class="fas fa-dumpster" onclick="deleteTask(${task.id})"></i>
                         </div>
                     </div>
-                    </div>`
+                </div>`
 
-                    
+
 
     //append the syntax to existing html
     $("#task-list").append(syntax);
 }
 
-function deleteTask(id){
-    console.log("Should delete a task", id);
+function retrieveData() {
+    $.ajax({
+        url: serverUrl + '/tasks',
+        type: "GET",
+        success: function (res) {
+            console.log("retreiving", res);
+            for (let i = 0; i < res.length; i++) {
+                let task = res[i]
+                if (task.user === "Marlo") {
+                    displayTask(task);
+                }
+            }
+        },
+        error: function (errorDetails) {
+            console.log("Error retrieving ", errorDetails);
+        }
+    });
 }
 
-function testRequest(){
+function deleteTask(id) {
+    console.log("Should delete a task", id);
     $.ajax({
-        url:"https://restclass.azurewebsites.net/api/test",
-        type:"GET",
-        success: function(res){
+        url: serverUrl + '/tasks/' + id,
+        type: "DELETE",
+        success: function (id) {
+            displayTask(task)
+        }
+    });
+}
+
+function testRequest() {
+    $.ajax({
+        url: "https://restclass.azurewebsites.net/api/test",
+        type: "GET",
+        success: function (res) {
             console.log("Yeei it worked!!", res);
         },
-        error: function(errorDetails){
+        error: function (errorDetails) {
             console.log("Oucch we have an error:(", errorDetails);
         }
     });
 }
 
-function init(){
+function init() {
     console.log("Task Manager");
 
 
@@ -113,6 +142,8 @@ function init(){
     $("#iImportant").click(toggleImportant);
     $("#btn-save").click(saveTask);
     $("#btnDetails").click(toggleDetailVisibility);
+
+    retrieveData();
 
 }
 window.onload = init;
