@@ -37,7 +37,6 @@ function saveTask() {
     var description = $("#txtDescription").val();
 
     var myTask = new Task(0, title, isItImportant, date, status, location, color, description);
-
     // save to server
     $.ajax({
         url: serverUrl + '/tasks',
@@ -56,7 +55,14 @@ function saveTask() {
     });
     //clear form
     $("#taskform").trigger("reset");
+
 }
+
+// $(document).ready(function(){
+//     $("#btn-save").click(function(){
+//         $("#hidelist").css("background-color",task.color);
+//     });
+// });
 
 
 function displayTask(task) {
@@ -84,11 +90,9 @@ function displayTask(task) {
                         </div>
                     </div>
                 </div>`
-
-
-
     //append the syntax to existing html
     $("#task-list").append(syntax);
+    
 }
 
 function retrieveData() {
@@ -102,8 +106,9 @@ function retrieveData() {
                 if (task.user === "Marlo") {
                     displayTask(task);
                 }
+                
             }
-            $()
+            
         },
         error: function (errorDetails) {
             console.log("Error retrieving ", errorDetails);
@@ -145,9 +150,10 @@ function init() {
     $("#btn-save").click(saveTask);
     $("#btnDetails").click(toggleDetailVisibility);
     $("#deleteTask").click(deleteTask);
+    
 
     retrieveData();
-
+    
 }
 window.onload = init;
 
