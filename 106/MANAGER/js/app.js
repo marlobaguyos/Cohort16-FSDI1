@@ -33,10 +33,10 @@ function saveTask() {
     var date = $("#txtDateTime").val();
     var status = $("#selStatus").val();
     var location = $("#txtLocation").val();
-    var color = $("#txtColor").val();
+    var alertText = $("#alertText").val();
     var description = $("#txtDescription").val();
 
-    var myTask = new Task(0, title, isItImportant, date, status, location, color, description);
+    var myTask = new Task(0, title, isItImportant, date, status, location, alertText, description);
     // save to server
     $.ajax({
         url: serverUrl + '/tasks',
@@ -68,24 +68,24 @@ function saveTask() {
 function displayTask(task) {
     //create the syntax
 
-    var syntax = `<div class="testBorder" id="hideList">
-                    <div class="d-flex bd-highlight testBorder">
-                        <div class="p-2 flex-fill bd-highlight testBorder">
+    var syntax = `<div id="hideList">
+                    <div class="d-flex bd-highlight testBorder" style="background-color:${task.alertText};">
+                        <div class="p-2 flex-fill bd-highlight">
                         <i class="far fa-star task-star task-section-sm"></i>
                         </div>
 
-                        <div class="p-2 flex-fill bd-highlight testBorder">
+                        <div class="p-2 flex-fill bd-highlight">
                             <p class="testBorde">${task.title}</p>
                             <p class="testBorde">${task.description}</p>
                         </div>
 
-                        <div class="p-2 flex-fill bd-highlight testBorder">
+                        <div class="p-2 flex-fill bd-highlight">
                             <div class="testBorde">${task.date}</div>
                             <div class="testBorde">${task.location}</div>
                             <div class="testBorde">${task.status}</div>
                         </div>
 
-                        <div class="p-2 flex-fill bd-highlight testBorder">
+                        <div class="p-2 flex-fill bd-highlight">
                         <i class="fas fa-dumpster" id="deleteTask" onclick="deleteTask(${task.id})"></i>
                         </div>
                     </div>

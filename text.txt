@@ -1,0 +1,7 @@
+font-family: 'Chango', cursive;
+font-family: 'Solway', serif;
+
+
+font-family: 'Chango', cursive;
+font-family: 'Palanquin', sans-serif;
+font-family: 'Solway', serif;

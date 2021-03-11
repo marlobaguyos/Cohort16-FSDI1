@@ -11,23 +11,25 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link href="../css/app.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chango&family=Palanquin:wght@300;400;700&family=Solway:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="../css/managerStyle.css" rel="stylesheet">
 
 </head>
 
-<body>
-    <div class="container">
-        <main class="content">
-            <section id="capture">
-                <h1 class="container">Add Task</h1>
-                <form id="taskform" class="capture-form">
+<body class="taskBody">
+    <div class="topCover">
+        <h1 class="mainh1">Do doYourWork APP</h1>
+    </div>
 
-                    <!-- <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default"
-                            style="font-weight: 700;">ID</span>
-                        <input type="text" class="form-control" id="txtId" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default" placeholder="ID" disabled>
-                    </div> -->
+    <div>
+        <main class="mainDiv">
+            <section id="capture">
+                <h2 class="mb-auto">Add Task</h2>
+                
+                <form id="taskform" class="capture-form mainForm">
 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default"
@@ -42,9 +44,12 @@
                     </div>
 
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default txt-dateTime" style="font-weight: 700;">Date &
+                        <span class="input-group-text" id="inputGroup-sizing-default txt-dateTime"
+                            style="font-weight: 700;">Date &
                             Time</span>
-                        <input type="datetime-local" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Enter Date $ Time: Month/Day/Year 12:00 AM/PM" id="txtDateTime">
+                        <input type="datetime-local" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default"
+                            placeholder="Enter Date $ Time: Month/Day/Year 12:00 AM/PM" id="txtDateTime">
                     </div>
 
                     <div class="input-group mb-3">
@@ -62,24 +67,16 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default"
                             style="font-weight: 700;">Location</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Please Enter Location" id="txtLocation">
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Please Enter Location"
+                            id="txtLocation">
                     </div>
 
-                    <!-- <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default"
-                            style="font-weight: 700;" id="sel-priority">Priority</span>
-                        <select class="form-select" aria-label="Default select example" id="selPriority">
-                            <option selected disabled>--- Please Select Priority ---</option>
-                            <option value="1">Low</option>
-                            <option value="2">Medium</option>
-                            <option value="3">High</option>
-                            <option value="3">Critical</option>
-                        </select>
-                    </div> -->
-                    
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default" style="font-weight: 700;">Color</span>
-                        <input type="color" class="form-control form-control-color" id="txtColor" value="#563d7c" title="Choose your color">
+                        <span class="input-group-text" id="inputGroup-sizing-default"
+                            style="font-weight: 700;">Color</span>
+                        <input type="color" class="form-control form-control-color" id="alertText" value="#563d7c"
+                            title="Choose your color">
                     </div>
 
                     <div class="input-group mb-3">
@@ -87,45 +84,36 @@
                         <textarea class="form-control" aria-label="With textarea" id="txtDescription"></textarea>
                     </div>
 
-                    <!-- <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default"
-                            style="font-weight: 700;">Color</span>
-                            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-                            <label class="btn btn-secondary" for="option1" style="background-color:purple;">Purple</label>
-                            
-                            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                            <label class="btn btn-secondary" for="option2" style="background-color:Pink;">Pink</label>
-                            
-                            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                            <label class="btn btn-secondary" for="option3" style="background-color:red;">Red</label>
-                            
-                            <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-                            <label class="btn btn-secondary" for="option4" style="background-color:#1c87c9;">Blue</label>
-                    </div> -->
-                    
                     <div class="btn-div">
-                        <button class="btn-save" id="btn-save" type="button" style="background-color:rgb(207, 203, 203);color: rgb(34, 36, 36);">
+                        <button class="btn-save" id="btn-save" type="button"
+                            style="background-color:rgb(207, 203, 203);color: rgb(34, 36, 36);">
                             Save
                         </button>
                     </div>
                 </form>
-                
+
             </section>
-            <section id="list">
-                <h1 class="container listSec" >Task List</h1>
-                <button class="btn btn-sm btn-dark bth-showhide" id="btnDetails">Show/Hide Task</button>
+
+            <section id="list" class="container taskList">
+                <h2 class="container listSec">Task List</h2>
                 <div id="tList">
                     <div id="task-list">
                         <!-- display tasks here -->
                     </div>
                 </div>
+            <button class="btn btn-sm btn-info bth-showhide" id="btnDetails">Show/Hide Task</button>
             </section>
+        </main>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css">
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css">
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
     <script src="../js/task.js"></script>
