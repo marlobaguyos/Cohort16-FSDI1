@@ -2,7 +2,74 @@
     ViewData["Title"] = "Task";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bhal Bhal Bhal</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section id="capture">
+    <h2 class="mb-auto">Add Task</h2>
+
+    <form id="taskform" class="capture-form mainForm">
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default" style="font-weight: 700;">Title</span>
+            <input type="text" class="form-control" id="txtTitle" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" placeholder="Enter Title">
+        </div>
+
+        <div class="input-group mb-3 input-group-text myIcon">
+            <label class="iconLabel" style="font-weight: 700;">Is it Important?:&ensp;</label>
+            <i id="iImportant" class="far fa-star theIcon"></i>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default txt-dateTime" style="font-weight: 700;">Date &
+                Time</span>
+            <input type="datetime-local" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" placeholder="Enter Date $ Time: Month/Day/Year 12:00 AM/PM"
+                id="txtDateTime">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default" style="font-weight: 700;">Status</span>
+            <select class="form-select" aria-label="Default select example" id="selStatus">
+                <option selected disabled>--- Please Select Status ---</option>
+                <option value="1">Blocked</option>
+                <option value="2">Commited</option>
+                <option value="3">Deleted</option>
+                <option value="3">Done</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default" style="font-weight: 700;">Location</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" placeholder="Please Enter Location" id="txtLocation">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default" style="font-weight: 700;">Color</span>
+            <input type="color" class="form-control form-control-color" id="alertText" value="#563d7c"
+                title="Choose your color">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" style="font-weight: 700">Description</span>
+            <textarea class="form-control" aria-label="With textarea" id="txtDescription"></textarea>
+        </div>
+
+        <div class="btn-div">
+            <button class="btn-save" id="btn-save" type="button"
+                style="background-color:rgb(207, 203, 203);color: rgb(34, 36, 36);">
+                Save
+            </button>
+        </div>
+    </form>
+
+</section>
+
+<section id="list" class="container taskList">
+    <h2 class="container listSec">Task List</h2>
+    <div id="tList">
+        <div id="task-list">
+            <!-- display tasks here -->
+        </div>
+    </div>
+    <button class="btn btn-sm btn-info bth-showhide" id="btnDetails">Show/Hide Task</button>
+</section>
