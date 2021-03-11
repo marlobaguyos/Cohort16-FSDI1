@@ -20,10 +20,12 @@ body {
 }
 
 /* main */
-.mainDiv {
-    background-position: center;
-    
-}
+.mainDiv{
+    display: flex;
+    font-family: 'Palanquin', sans-serif;
+    background-image: url('../img/todo.png');
+    height: 74.5vh;
+} 
 
 .mainh1{
     text-align: center;
@@ -31,13 +33,6 @@ body {
     display: flex;
     font-family: 'Chango', cursive;
 }
-
-.mainDiv{
-    display: flex;
-    font-family: 'Palanquin', sans-serif;
-    background-image: url('../img/maincover.png');
-    height: 74.5vh;
-} 
 
 /* add task */
 
@@ -56,8 +51,8 @@ body {
     font-family: 'Chango', cursive;
     text-align: center;
     color:white;
-    padding-bottom: 2rem;
-    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-top: 7rem;
 }
 
 .mainForm {
@@ -85,7 +80,7 @@ body {
     text-align: center;
     color:white;
     padding-bottom: 1rem;
-    padding-top: 4rem;
+    padding-top: 5rem;
 }
 
 #btnDetails {
