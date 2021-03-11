@@ -11,7 +11,7 @@ body {
 .topCover {
     background-image: url(../img/papers.png);
     background-position: center;
-    height: 15vh;
+    height: 16.5vh;
     display: flex;
     align-items: center;
     justify-content: center;

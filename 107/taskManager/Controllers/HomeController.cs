@@ -33,6 +33,9 @@ namespace taskManager.Controllers
             return Content("Your are Awesome");
         }
 
+        [HttpGet]
+        
+
         public IActionResult About()
         {
             return View();
