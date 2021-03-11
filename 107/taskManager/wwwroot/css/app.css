@@ -11,31 +11,33 @@ body {
 .topCover {
     background-image: url(../img/papers.png);
     background-position: center;
-    height: 20vh;
+    height: 15vh;
     display: flex;
     align-items: center;
-    justify-content: 
-    center;background-repeat: no-repeat;
+    justify-content: center;
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 
 /* main */
 .mainDiv {
     background-position: center;
+    
 }
 
 .mainh1{
     text-align: center;
+    text-decoration: underline;
     display: flex;
     font-family: 'Chango', cursive;
 }
 
 .mainDiv{
     display: flex;
-    /* height: 100vh; */
     font-family: 'Palanquin', sans-serif;
     background-image: url('../img/maincover.png');
-    height: 80vh;
+    height: 74vh;
+    border-radius: 10px;
 } 
 
 /* add task */
