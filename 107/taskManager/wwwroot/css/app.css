@@ -1,0 +1,103 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color:whitesmoke;
+    min-height: 100%;
+}
+
+/* Header */
+
+.topCover {
+    background-image: url(../img/papers.png);
+    background-position: center;
+    height: 16.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* main */
+.mainDiv{
+    display: flex;
+    font-family: 'Palanquin', sans-serif;
+    background-image: url('../img/todo.png');
+    height: 74.5vh;
+} 
+
+.mainh1{
+    text-align: center;
+    text-decoration: underline;
+    display: flex;
+    font-family: 'Chango', cursive;
+}
+
+/* add task */
+
+#capture { 
+    flex: 1;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-image: url('../img/myclipboard.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+
+#capture h2{
+    font-family: 'Chango', cursive;
+    text-align: center;
+    color:white;
+    padding-bottom: 4rem;
+    padding-top: 7rem;
+}
+
+.mainForm {
+    
+    margin-left: 13%;
+    margin-right: 13%;
+}
+
+/* display task */
+
+#list {
+    flex: 2;
+    background-image: url('../img/board.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+}
+
+#list h2 {
+    font-family: 'Chango', cursive;
+    text-align: center;
+    color:white;
+    padding-bottom: 1rem;
+    padding-top: 5rem;
+}
+
+#btnDetails {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+
+.testBorder {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.flex-fill {
+    align-items: center;
+}
