@@ -5,3 +5,132 @@ font-family: 'Solway', serif;
 font-family: 'Chango', cursive;
 font-family: 'Palanquin', sans-serif;
 font-family: 'Solway', serif;
+
+/dump GetCVar("SpellQueueWindow")
+/console SpellQueueWindow 160
+
+Hektic — Yesterday at 8:47 PM
+#showtooltip fortifying brew
+/run PauseGCD = GetTime() + 0.2
+/hf cast Sinful Gladiator's Emblem
+/hf cast fortifying brew
+
+#showtooltip Flying Serpent Kick
+/stopcasting
+/stopcasting
+/run PauseGCD = GetTime() + 0.2
+/hf cast flying serpent kick
+
+#showtooltip Tiger's Lust
+/run PauseGCD = GetTime() + 0.2
+/hf cast Tiger's Lust
+
+#showtooltip Touch of Death
+/stopcasting
+/stopcasting
+/run PauseGCD = GetTime() + 0.2
+/hf cast Touch of Death
+
+#showtooltip blackout kick
+/stopcasting
+/stopcasting
+/run PauseGCD = GetTime() + 0.2
+/hf cast blackout kick
+/cast blackout kick
+/cast [@arenapet1] Provoke
+/cast [@arenapet2] Provoke
+/cast [@arenapet3] Provoke
+
+#showtooltip transcendence
+/run PauseGCD = GetTime() + 0.2
+/hf cast transcendence
+/wm [@cursor] 3
+/hf cast transcedence
+
+#showtooltip tigereye brew
+/run PauseGCD = GetTime() + 0.2
+/hf cast tigereye brew
+
+#showtooltip Ring of Peace
+/run PauseGCD = GetTime() + 0.2
+/hf cast Ring of Peace
+
+#showtooltip roll
+/stopcasting
+/stopcasting
+/cast roll
+
+#showtooltip invoke xuen, the white tiger
+/run PauseGCD = GetTime() + 0.2
+/hf cast weapons of order
+/cast storm, earth, and fire
+/hf burst
+/hf cast rising sun kick
+
+#showtooltip tiger palm
+/run PauseGCD = GetTime() + 0.2
+/stopcasting
+/cast tiger palm
+/hf cast tiger palm
+
+#showtooltip Transcendence: Transfer
+/stop cast
+/run PauseGCD = GetTime() + 0.5
+/hf cast Transcendence: Transfer
+
+#showtooltip Vivify
+/run PauseGCD = GetTime() + 0.2
+/hf cast Vivify
+
+#showtooltip Crackling Jade Lightning
+/run PauseGCD = GetTime() + 0.2
+/hf cast Crackling Jade Lightning
+
+#showtooltip
+/run PauseGCD = GetTime() + 0.2
+/cast [talent:5/3] Dampen Harm
+/cast [talent:5/2] Diffuse Magic
+[8:48 PM]
+//////\\\\  other macros /////\\\\
+
+#showtooltip paralysis
+/stopcasting
+/run PauseGCD = GetTime() + 0.2
+/hf cast [target=arena1] paralysis
+
+#showtooltip paralysis
+/stopcasting
+/run PauseGCD = GetTime() + 0.2
+/hf cast [target=arena2] paralysis
+
+#showtooltip paralysis
+/stopcasting
+/run PauseGCD = GetTime() + 0.2
+/hf cast [target=arena3] paralysis
+
+#showtooltip Grapple Weapon(PvP Talent)
+/run PauseGCD = GetTime() + 0.2
+/hf cast Grapple Weapon(PvP Talent)
+
+#showtooltip expel harm
+/run PauseGCD = GetTime() + 0.2
+/hf cast expel harm
+/cast expel harm
+
+#showtooltip touch of karma
+/stopcasting
+/stopcasting
+/run PauseGCD = GetTime() + 0.2
+/cast touch of karma
+
+#showtooltip leg sweep
+/stopcasting
+/stopcasting
+/run PauseGCD = GetTime() + 0.2
+/hf castcheck 6 1 Leg Sweep
+
+/kfm mkww cast Weapons of Order
+/kfm mkww cast Blood Fury
+/kfm mkww cast Invoke Xuen, the White Tiger
+/kfm mkww cast Storm, Earth, and Fire
+/kfm mkww cast Rising Sun Kick
